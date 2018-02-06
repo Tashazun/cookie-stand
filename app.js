@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 // Store hour array, and total of cookies sold for the day.
 const storeHours = ['6am: ', '7am: ', '8am: ', '9am: ', '10am: ', '11am: ', '12pm: ', '1pm: ', '2pm: ', '3pm: ', '4pm: ', '5pm: ','6pm: ', '7pm: ',  '8pm: ', 'Total: '];
 
@@ -15,26 +15,26 @@ const airport = {
         return Math.floor(Math.random() * this.cookiePer) + 1 + this.customerGen();
     },
     cookieBought: function() {
-        for (let i = 0; i < 15; i++) { 
+        for (let i = 0; i < 15; i++) {
             this.totalCookies.push(this.customerPurchase());
-            }
-        },
+        }
+    },
     cookieTotal: function() {
-        let tally = 0
+        let tally = 0;
         for (let w = 0; w < 15; w++) {
             tally = tally + this.totalCookies[w];
         }
         this.totalCookies.push(tally);
-    },        
+    },
     addList: function() {
-        for (let x = 0; x < this.totalCookies.length; x++) {       
+        for (let x = 0; x < this.totalCookies.length; x++) {
             const list = document.getElementById('airport');
             const firstLi = document.createElement('li');
             firstLi.textContent = storeHours[x] + this.totalCookies[x] + ' cookies';
             list.appendChild(firstLi);
-        }             
+        }
     }
-}    
+};
 airport.customerGen();
 airport.customerPurchase();
 airport.cookieBought();
@@ -54,35 +54,33 @@ const pioneerSquare = {
     customerPurchase: function() {
         return Math.floor(Math.random() * this.cookiePer) + 1 + this.customerGen();
     },
-    
     cookieBought: function() {
         for (let i = 0; i < 15; i++) {
             this.totalCookies.push(this.customerPurchase());
         }
     },
     cookieTotal: function() {
-        let tally = 0
+        let tally = 0;
         for (let w = 0; w < 15; w++) {
             tally = tally + this.totalCookies[w];
         }
         this.totalCookies.push(tally);
-    },        
+    },
     addList: function() {
-        for (let x = 0; x < this.totalCookies.length; x++) {       
+        for (let x = 0; x < this.totalCookies.length; x++) {
             const list = document.getElementById('pioneer');
             const firstLi = document.createElement('li');
             firstLi.textContent = storeHours[x] + this.totalCookies[x] + ' cookies';
             list.appendChild(firstLi);
-        } 
+        }
     }
-}        
+};
 pioneerSquare.customerGen();
 pioneerSquare.customerPurchase();
 pioneerSquare.cookieBought();
 pioneerSquare.cookieTotal();
 pioneerSquare.addList();
 console.log('Number of customers at Pionner Square: ' + pioneerSquare.customerGen(), 'Number of cookies purchased: ' + pioneerSquare.customerPurchase());
-    
 // Amount of cookies needed at Powell's
 const powells = {
     minHourly: 23,
@@ -96,26 +94,26 @@ const powells = {
         return Math.floor(Math.random() * this.cookiePer) + 1 + this.customerGen();
     },
     cookieBought: function() {
-        for (let i = 0; i < 15; i++) { 
+        for (let i = 0; i < 15; i++) {
             this.totalCookies.push(this.customerPurchase());
         }
     },
     cookieTotal: function() {
-        let tally = 0
+        let tally = 0;
         for (let w = 0; w < 15; w++) {
             tally = tally + this.totalCookies[w];
         }
         this.totalCookies.push(tally);
-    },        
+    },
     addList: function() {
-        for (let x = 0; x < this.totalCookies.length; x++) {       
+        for (let x = 0; x < this.totalCookies.length; x++) {
             const list = document.getElementById('powell');
             const firstLi = document.createElement('li');
             firstLi.textContent = storeHours[x] + this.totalCookies[x] + ' cookies';
             list.appendChild(firstLi);
-        }             
+        }
     }
-}    
+};
 powells.customerGen();
 powells.customerPurchase();
 powells.cookieBought();
@@ -136,26 +134,26 @@ const john = {
         return Math.floor(Math.random() * this.cookiePer) + 1 + this.customerGen();
     },
     cookieBought: function() {
-        for (let i = 0; i < 15; i++) { 
+        for (let i = 0; i < 15; i++) {
             this.totalCookies.push(this.customerPurchase());
         }
     },
     cookieTotal: function() {
-        let tally = 0
+        let tally = 0;
         for (let w = 0; w < 15; w++) {
             tally = tally + this.totalCookies[w];
         }
         this.totalCookies.push(tally);
-    },        
+    },
     addList: function() {
-        for (let x = 0; x < this.totalCookies.length; x++) {       
+        for (let x = 0; x < this.totalCookies.length; x++) {
             const list = document.getElementById('john');
             const firstLi = document.createElement('li');
             firstLi.textContent = storeHours[x] + this.totalCookies[x] + ' cookies';
             list.appendChild(firstLi);
-        }             
+        }
     }
-}    
+};
 john.customerGen();
 john.customerPurchase();
 john.cookieBought();
@@ -176,26 +174,26 @@ const waterfront = {
         return Math.floor(Math.random() * this.cookiePer) + 1 + this.customerGen();
     },
     cookieBought: function() {
-        for (let i = 0; i < 15; i++) { 
+        for (let i = 0; i < 15; i++) {
             this.totalCookies.push(this.customerPurchase());
         }
     },
     cookieTotal: function() {
-        let tally = 0
+        let tally = 0;
         for (let w = 0; w < 15; w++) {
             tally = tally + this.totalCookies[w];
         }
         this.totalCookies.push(tally);
-    },        
+    },
     addList: function() {
-        for (let x = 0; x < this.totalCookies.length; x++) {       
+        for (let x = 0; x < this.totalCookies.length; x++) {
             const list = document.getElementById('waterfront');
             const firstLi = document.createElement('li');
             firstLi.textContent = storeHours[x] + this.totalCookies[x] + ' cookies';
             list.appendChild(firstLi);
-        }             
+        }
     }
-}    
+};
 waterfront.customerGen();
 waterfront.customerPurchase();
 waterfront.cookieBought();
