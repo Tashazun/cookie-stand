@@ -60,7 +60,7 @@ const airport = {
         return Math.floor(Math.random() * (this.maxHourly - this.minHourly)) + this.minHourly;
     },
     customerPurchase: function() {
-        return Math.floor(Math.random() * this.cookiePer) + 1 + this.customerGen();
+        return Math.floor(this.cookiePer * this.customerGen());
     },
     cookieBought: function() {
         for (let i = 0; i < 15; i++) {
@@ -100,7 +100,7 @@ const pioneerSquare = {
         return Math.floor(Math.random() * (this.maxHourly - this.minHourly)) + this.minHourly;
     },
     customerPurchase: function() {
-        return Math.floor(Math.random() * this.cookiePer) + 1 + this.customerGen();
+        return Math.floor(this.cookiePer * this.customerGen());
     },
     cookieBought: function() {
         for (let i = 0; i < 15; i++) {
@@ -139,7 +139,7 @@ const powells = {
         return Math.floor(Math.random() * (this.maxHourly - this.minHourly)) + this.minHourly;
     },
     customerPurchase: function() {
-        return Math.floor(Math.random() * this.cookiePer) + 1 + this.customerGen();
+        return Math.floor(this.cookiePer * this.customerGen());
     },
     cookieBought: function() {
         for (let i = 0; i < 15; i++) {
@@ -179,7 +179,7 @@ const john = {
         return Math.floor(Math.random() * (this.maxHourly - this.minHourly)) + this.minHourly;
     },
     customerPurchase: function() {
-        return Math.floor(Math.random() * this.cookiePer) + 1 + this.customerGen();
+        return Math.floor(this.cookiePer * this.customerGen());
     },
     cookieBought: function() {
         for (let i = 0; i < 15; i++) {
@@ -219,7 +219,7 @@ const waterfront = {
         return Math.floor(Math.random() * (this.maxHourly - this.minHourly)) + this.minHourly;
     },
     customerPurchase: function() {
-        return Math.floor(Math.random() * this.cookiePer) + 1 + this.customerGen();
+        return Math.floor(this.cookiePer * this.customerGen());
     },
     cookieBought: function() {
         for (let i = 0; i < 15; i++) {
