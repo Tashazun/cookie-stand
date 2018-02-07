@@ -1,10 +1,58 @@
 'use strict';
-// Store hour array, and total of cookies sold for the day.
-const storeHours = ['6am: ', '7am: ', '8am: ', '9am: ', '10am: ', '11am: ', '12pm: ', '1pm: ', '2pm: ', '3pm: ', '4pm: ', '5pm: ','6pm: ', '7pm: ',  '8pm: ', 'Total: '];
+// Store hour array, total cookies, and locations.
+const storeHours = ['6am: ', '7am: ', '8am: ', '9am: ', '10am: ', '11am: ', '12pm: ', '1pm: ', '2pm: ', '3pm: ', '4pm: ', '5pm: ','6pm: ', '7pm: ',  '8pm: '];
+//const locations = ['PDX Airport', 'Pioneer Square', 'Powell\'s', 'St. John\'s', 'Waterfront'];
+const cookies = [];
 
-// Amount of cookies needed at the PDX Airport
+// Main constructor Function.
+function Sales (minHourly, maxHourly, cookiesPer, locations) {
+    this.minHourly = minHourly;
+    this.maxHourly = maxHourly;
+    this.cookiesPer = cookiesPer;
+    this.locations = locations;
+}
+
+Sales.prototype.customerGen = function() {
+    return Math.floor(Math.random() * (this.maxHourly - this.minHourly)) + this.minHourly;
+};
+Sales.prototype.customerPurchase = function() {
+    return Math.floor(Math.random() * this.cookiesPer) + 1 + this.customerGen();
+};
+Sales.prototype.cookieBought = function() {
+    for (let i = 0; i < 15; i++) {
+        cookies.push(this.customerPurchase());
+    }
+};
+Sales.prototype.render = function() {
+        const column = document.getElementById('amounts')
+        const thColumn = document.createElement('td');
+        thColumn.textContent = this.location;
+        column.appendChild(thColumn);
+};
+
+const createHeader = function() {
+    for (let i = 0; i < storeHours.length; i++) {
+        const row = document.getElementById('info');
+        const thRow = document.createElement('th');
+        thRow.textContent = storeHours[i]; 
+        row.appendChild(thRow);
+    }
+};
+
+console.log(createHeader());
+
+Sales.prototype.saleTotals = function() {
+    for (let z = 0; z < cookies.length; z++) {
+        const td = document.createElement('td');
+        td.textContent = cookies;
+    }
+};  
+const sale1 = new Sales(6, 24, 3.4);
+
+console.log(createRow);
+console.log(cookies);
 const airport = {
-    minHourly: 23,
+        minHourly: 23,
     maxHourly: 65,
     cookiePer: 6.3,
     totalCookies: [],
