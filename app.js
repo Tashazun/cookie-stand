@@ -49,21 +49,31 @@ Sales.prototype.render = function() {
 
 const airport = new Sales(23, 65, 6.3, 'Airport');
 const pioneerSquare = new Sales(3, 24, 1.2, 'Pioneer Square');
-const powell = new Sales(11, 38, 3.7, 'Pioneer Square');
+const powell = new Sales(11, 38, 3.7, 'Powell\'s');
 const stJohn = new Sales(20, 38, 2.3, 'St. John');
 const waterfront = new Sales(2, 16, 4.6, 'Waterfront');
 
 const locations = [airport, pioneerSquare, powell, stJohn, waterfront];
 
 const runAll = function() {
-    for (let a = 0; a < locations.length; a++) {
-        locations[a].customerGen();
-        locations[a].customerPurchase();
-        locations[a].cookieBought();
-        locations[a].cookieTotal();
-        locations[a].render();
+    for (let a = 0; a < 5; a++) {
+        if (locations.length > 5) {           
+            locations[locations.length - 1].customerGen();
+            locations[locations.length - 1].customerPurchase();
+            locations[locations.length - 1].cookieBought();
+            locations[locations.length - 1].cookieTotal();
+            locations[locations.length - 1].render();
+            break;
+        } else {
+            locations[a].customerGen();
+            locations[a].customerPurchase();
+            locations[a].cookieBought();
+            locations[a].cookieTotal();
+            locations[a].render();
+        }
     }
 };
+
 
 function createHeader() {
     for (let i = 0; i < storeHours.length; i++) {
@@ -73,6 +83,20 @@ function createHeader() {
         row.appendChild(thRow);
     }
 };
-
-createHeader();
 runAll();
+createHeader();
+
+const form = document.querySelector('form');
+
+form.addEventListener('submit', function() {
+    event.preventDefault();
+    
+    let newStore = new Sales(
+        this.minHourly.value,
+        this.maxHourly.value,
+        this.cookiesPer.value,
+        this.name.value);
+        
+    locations.push(newStore);
+    runAll();
+}, false);
