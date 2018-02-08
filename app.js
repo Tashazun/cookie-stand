@@ -44,7 +44,6 @@ Sales.prototype.render = function() {
     const thRow = document.createElement('td');
     thRow.textContent = this.tally;
     newRow.appendChild(thRow);
-
 };
 
 const airport = new Sales(23, 65, 6.3, 'Airport');
@@ -74,13 +73,13 @@ const runAll = function() {
     }
 };
 
-
 function createHeader() {
     for (let i = 0; i < storeHours.length; i++) {
         const row = document.getElementById('info');
         const thRow = document.createElement('th');
         thRow.textContent = storeHours[i];
         row.appendChild(thRow);
+
     }
 };
 runAll();
