@@ -34,7 +34,7 @@ Sales.prototype.render = function() {
     const newRow = document.createElement('tr');
     const nameCell = document.createElement('td');
     nameCell.textContent = this.name;
-    newRow.appendChild(nameCell);
+    newRow.appendChild(nameCell)
     for (let x = 0; x < this.cookies.length; x++) {
         const newCell = document.createElement('td');
         newCell.textContent = this.cookies[x];
