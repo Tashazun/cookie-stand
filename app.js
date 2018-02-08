@@ -34,7 +34,7 @@ Sales.prototype.render = function() {
     const newRow = document.createElement('tr');
     const nameCell = document.createElement('td');
     nameCell.textContent = this.name;
-    newRow.appendChild(nameCell)
+    newRow.appendChild(nameCell);
     for (let x = 0; x < this.cookies.length; x++) {
         const newCell = document.createElement('td');
         newCell.textContent = this.cookies[x];
@@ -57,7 +57,7 @@ const locations = [airport, pioneerSquare, powell, stJohn, waterfront];
 
 const runAll = function() {
     for (let a = 0; a < 5; a++) {
-        if (locations.length > 5) {           
+        if (locations.length > 5) {
             locations[locations.length - 1].customerGen();
             locations[locations.length - 1].customerPurchase();
             locations[locations.length - 1].cookieBought();
@@ -90,13 +90,13 @@ const form = document.querySelector('form');
 
 form.addEventListener('submit', function() {
     event.preventDefault();
-    
-    let newStore = new Sales(
+
+    const newStore = new Sales(
         this.minHourly.value,
         this.maxHourly.value,
         this.cookiesPer.value,
         this.name.value);
-        
+
     locations.push(newStore);
     runAll();
 }, false);
