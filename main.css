@@ -1,6 +1,12 @@
-.container {
+#container {
     display: flex;
-    flex-direction: column;
-    align-content: center;
-    background-color: #9F9F9F;
+}
+
+
+#logo {
+    font-family: 'Lobster', cursive;
+    color: #EC7063;
+    width: 75%;
+    background-color: #34495E;  
+    text-align: center;
 };
