@@ -2,10 +2,11 @@
 <html>
     <head>
         <title>Stupid Project</title>
-
+        <link rel="stylesheet" type="text/css" href= "main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body>
-        <table>
+    <body class ="container">
+        <table id= "table">
            <thead>
                <tr id = "info"></tr>
            </thead>
@@ -15,19 +16,21 @@
                <tr id = "total"></tr>
            </tfoot>
         </table>
+        <br />
         <form>
             <fieldset>
+                <legend>New Store:</legend>
                 <label>Minimum Hourly Customer Traffic:</label>
-                <input type="text" name="min" id="minimum">
+                <input type="text" name="minHourly" id="minHourly">
                 <br />
                 <label>Maximum Hourly Customer Traffic:</label>
-                <input type="text" name="max" id="maximum">
+                <input type="text" name="maxHourly" id="maxHourly">
                 <br />
                 <label>Average Hourly Cookie Sales:</label>
-                <input type="text" name="cookie" id="sales">
+                <input type="text" name= "cookiesPer" id="cookiesPer">
                 <br />
                 <label>Name of New Location:</label>
-                <input type="text" name="new" id="location">
+                <input type="text" name="name" id="name">
                 <input type="submit" value="Submit" id="submit">
             </fieldset>
         </form>

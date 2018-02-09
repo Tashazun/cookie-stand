@@ -1,0 +1,25 @@
+*{
+    border: red 1px solid;
+}
+
+
+#container {
+    background-color: #212F3C;
+}
+
+#logo {
+    position: absolute;
+    top: 10px;
+    left: 25%;
+    z-index: -1;
+}
+
+
+#header {
+    font-family: 'Lobster', cursive;
+    color: #EC7063;
+    width: 100%;
+    background-color: transparent;  
+    text-align: center;
+
+};
