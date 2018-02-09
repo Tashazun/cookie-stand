@@ -2,9 +2,8 @@
     border: red 1px solid;
 }
 
-
 #container {
-    background-color: #212F3C;
+    /* background-color: #212F3C; */
 }
 
 #logo {
@@ -22,4 +21,26 @@
     background-color: transparent;  
     text-align: center;
 
-};
+    height: 300px;
+    background-image: url(images/salmon.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    padding-top: 10%;
+    box-sizing: border-box;
+}
+
+#main {
+    display: flex;
+}
+
+#section {
+    width: 60%;
+}
+
+#nav {
+    width: 40%;
+    position: sticky;
+    align-self: flex-start;
+    top: 100px;
+}
