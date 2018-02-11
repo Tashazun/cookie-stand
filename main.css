@@ -1,25 +1,128 @@
-*{
-    border: red 1px solid;
-}
 
-
-#container {
+.container {
     background-color: #212F3C;
 }
 
-#logo {
-    position: absolute;
-    top: 10px;
-    left: 25%;
-    z-index: -1;
+.title {
+    font-size: 5em;
+    padding-top: 5%;
 }
-
 
 #header {
     font-family: 'Lobster', cursive;
     color: #EC7063;
     width: 100%;
-    background-color: transparent;  
+    background-color: #34495E;  
     text-align: center;
+    height: 300px;
+    background-image: url(images/salmon.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin: auto;
+    border: dotted #85929E;
+    border-radius: 2em;
+}
+.center {
+    text-align: center;
+}
 
-};
+h2, h3 {
+    font-family: 'Courier New', Courier, monospace;
+    color:  #212F3C;
+    font-size: 2em;
+}
+.border2 {
+    background-color: #85929E;
+    padding: 5%;
+    border-style: hidden;
+    border-radius: 2em;
+}
+#main {
+    display: flex;
+}
+
+#article1, #article2, #article3 {
+    background-color: #34495E; 
+    padding: 5%;
+    border: dotted #85929E;
+    border-radius: 2em;
+    margin: 2%; 
+}
+
+#nav {
+    align-self: flex-start;
+    position: sticky;
+    top: 0;
+    width: 25%;
+}
+#nav1, #nav2 {
+    background-color: #34495E;
+    padding: 5%;
+    margin: 5%;
+    border: dotted #85929E;
+    border-radius: 2em;
+}
+
+.image {
+    padding: 2%;
+    width: 100%;
+    overflow: hidden;
+}
+
+a:link {
+    color: #212F3C;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+a:visited {
+    color: #212F3C;
+}
+a:hover {
+    background-image: url("images/chinook1.png")
+}
+ul {
+    list-style: none;
+}
+footer {
+    font-family: 'Lobster', cursive;
+    color: #EC7063;
+    width: 85%;
+    background-color: #34495E;  
+    text-align: center;
+    height: 300px;
+    background-image: url(images/chinook1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin: auto;
+    border: dotted #85929E;
+    border-radius: 2em;
+}
+/* css for the second page */
+
+#main2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.border1 {
+    align-self: center;
+    background-color: #34495E;
+    padding: 5%;
+    margin: 5%;
+    border: dotted #85929E;
+    border-radius: 2em;
+}
+table, th, td {
+    border: 1px solid #34495E;
+}
+#form {
+    align-self: center;
+    background-color: #34495E;
+    padding: 5%;
+    margin: 5%;
+    border: dotted #85929E;
+    border-radius: 2em;
+    width: 65%;
+}

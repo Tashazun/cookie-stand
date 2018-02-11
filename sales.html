@@ -1,40 +1,50 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Stupid Project</title>
+        <title>Salmon Cookies</title>
         <link rel="stylesheet" type="text/css" href= "main.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body class ="container">
-        <table id= "table">
-           <thead>
-               <tr id = "info"></tr>
-           </thead>
-           <tbody id = "amounts">
-           </tbody>
-           <tfoot>
-               <tr id = "total"></tr>
-           </tfoot>
-        </table>
-        <br />
-        <form>
-            <fieldset>
-                <legend>New Store:</legend>
-                <label>Minimum Hourly Customer Traffic:</label>
-                <input type="text" name="minHourly" id="minHourly">
-                <br />
-                <label>Maximum Hourly Customer Traffic:</label>
-                <input type="text" name="maxHourly" id="maxHourly">
-                <br />
-                <label>Average Hourly Cookie Sales:</label>
-                <input type="text" name= "cookiesPer" id="cookiesPer">
-                <br />
-                <label>Name of New Location:</label>
-                <input type="text" name="name" id="name">
-                <input type="submit" value="Submit" id="submit">
-            </fieldset>
-        </form>
+        <main id="main2">
+            <article class="border1">
+                <div class="border2">
+                    <table id= "table">
+                    <thead>
+                        <tr id = "info"></tr>
+                    </thead>
+                    <tbody id = "amounts">
+                    </tbody>
+                    <tfoot>
+                        <tr></tr>
+                    </tfoot>
+                    </table>
+                </div>    
+            </article>        
+            <br />
+            <form id="form">
+                <fieldset>
+                    <legend>New Store:</legend>
+                    <div>
+                        <label>Minimum Hourly Customer Traffic:</label>
+                        <input type="text" name="minHourly" id="minHourly">
+                    </div>
+                    <div>    
+                        <label>Maximum Hourly Customer Traffic:</label>
+                        <input type="text" name="maxHourly" id="maxHourly">
+                    </div>
+                    <div>    
+                        <label>Average Hourly Cookie Sales:</label>
+                        <input type="text" name= "cookiesPer" id="cookiesPer">
+                    </div>
+                    <div>    
+                        <label>Name of New Location:</label>
+                        <input type="text" name="name" id="name">
+                        <input type="submit" value="Submit" id="submit">
+                    </div>    
+                </fieldset>
+            </form>
+        </main>    
         <script type ="text/javascript" src = "app.js"></script>
     </body>
-
 </html>
