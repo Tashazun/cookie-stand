@@ -4,47 +4,64 @@
         <title>Salmon Cookies</title>
         <link rel="stylesheet" type="text/css" href= "main.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     </head>
     <body class ="container">
-        <main id="main2">
-            <article class="border1">
-                <div class="border2">
-                    <table id= "table">
-                    <thead>
-                        <tr id = "info"></tr>
-                    </thead>
-                    <tbody id = "amounts">
-                    </tbody>
-                    <tfoot>
-                        <tr></tr>
-                    </tfoot>
-                    </table>
-                </div>    
-            </article>        
-            <br />
-            <form id="form">
-                <fieldset>
-                    <legend>New Store:</legend>
-                    <div>
-                        <label>Minimum Hourly Customer Traffic:</label>
-                        <input type="text" name="minHourly" id="minHourly">
-                    </div>
-                    <div>    
-                        <label>Maximum Hourly Customer Traffic:</label>
-                        <input type="text" name="maxHourly" id="maxHourly">
-                    </div>
-                    <div>    
-                        <label>Average Hourly Cookie Sales:</label>
-                        <input type="text" name= "cookiesPer" id="cookiesPer">
-                    </div>
-                    <div>    
-                        <label>Name of New Location:</label>
-                        <input type="text" name="name" id="name">
-                        <input type="submit" value="Submit" id="submit">
+            <header class="header">
+                    <h1 class="title">Salmon Cookies</h1>
+                    <h3>Store Hours: Mon-Fri 7am - 5pm Satuday 9am - 5pm Sunday Closed</h3>
+            </header>
+            <article class="nav3">
+                <div id="border3">
+                    <ul id ="horizontal">
+                        <li><a href="index.html">Home Page</a></li>
+                        <li><a href="sales.html">Stores</a></li>
+                        <li><a href="#Story">Our Story</a></li>
+                        <li><a href="#Contact">Contact Us</a></li>
+                    </ul>
+                </div>
+            </article> 
+            <main id="main2">
+            <section class ="order">
+                <article class="border1">
+                    <h2 class= "center">Current and Future Stores</h2>
+                    <div class="border2">
+                        <table id= "table">
+                        <thead>
+                            <tr id = "info"></tr>
+                        </thead>
+                        <tbody id = "amounts">
+                        </tbody>
+                        <tfoot>
+                            <tr></tr>
+                        </tfoot>
+                        </table>
                     </div>    
-                </fieldset>
-            </form>
-        </main>    
+                </article>        
+                <form id="form">
+                    <h2>New Store</h2>
+                    <fieldset class="border2">
+                        <div>
+                            <label>Minimum Hourly Customer Traffic:</label>
+                            <input type="text" name="minHourly" id="minHourly">
+                        </div>
+                        <div>    
+                            <label>Maximum Hourly Customer Traffic:</label>
+                            <input type="text" name="maxHourly" id="maxHourly">
+                        </div>
+                        <div>    
+                            <label>Average Hourly Cookie Sales:</label>
+                            <input type="text" name= "cookiesPer" id="cookiesPer">
+                        </div>
+                        <div>    
+                            <label>Name of New Location:</label>
+                            <input type="text" name="name" id="name">
+                            <input type="submit" value="Submit" id="submit">
+                        </div>    
+                    </fieldset>
+                </form>
+            </section>    
+        </main>  
         <script type ="text/javascript" src = "app.js"></script>
     </body>
 </html>
