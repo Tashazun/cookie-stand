@@ -8,13 +8,14 @@
     padding-top: 5%;
 }
 
-#header {
+.header {
     font-family: 'Lobster', cursive;
     color: #EC7063;
     width: 100%;
     background-color: #34495E;  
     text-align: center;
     height: 300px;
+    padding: 10px;
     background-image: url(images/salmon.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -25,6 +26,11 @@
 }
 .center {
     text-align: center;
+}
+
+p {
+    text-indent: 50px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 h2, h3 {
@@ -55,14 +61,16 @@ h2, h3 {
     position: sticky;
     top: 0;
     width: 25%;
+    margin: 10px;
 }
-#nav1, #nav2 {
+.nav1, .nav2 {
     background-color: #34495E;
     padding: 5%;
     margin: 5%;
     border: dotted #85929E;
     border-radius: 2em;
 }
+
 
 .image {
     padding: 2%;
@@ -77,9 +85,6 @@ a:link {
 }
 a:visited {
     color: #212F3C;
-}
-a:hover {
-    background-image: url("images/chinook1.png")
 }
 ul {
     list-style: none;
@@ -114,15 +119,36 @@ footer {
     border: dotted #85929E;
     border-radius: 2em;
 }
+#border3 {
+    background-color: #85929E;
+    border-style: hidden;
+    border-radius: 2em;
+}
 table, th, td {
     border: 1px solid #34495E;
+    width: 100%;
 }
 #form {
     align-self: center;
     background-color: #34495E;
     padding: 5%;
-    margin: 5%;
+    margin: auto;
     border: dotted #85929E;
     border-radius: 2em;
     width: 65%;
+}
+.nav3 {
+    background-color: #34495E;
+    padding: 10px;
+    border: dotted #85929E;
+    border-top-style: hidden;
+    border-radius: 2em;
+}
+
+#horizontal li {
+    display: inline;
+    padding: 7%;
+}
+form div {
+    padding: 3%;
 }
